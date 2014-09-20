@@ -1,0 +1,46 @@
+<template name="leaderboard">
+  {{#if showSelectedPlayer}}
+  <h2>Selected Player</h2>
+  <h3>
+    {{showSelectedPlayer.name}}
+    <small>
+      Score: {{showSelectedPlayer.score}}&nbsp;
+      {{#if currentUser}}
+      | ID: {{showSelectedPlayer._id}}
+      {{/if}}
+    </small>
+  </h3>
+  {{else}}
+  
+  {{#if currentUser}}
+  <p><strong>Select a player to give points to!</strong></p>
+  {{else}}
+  <p><strong>Please register or login at the top to add players.</strong></p>
+  {{/if}}
+  {{/if}}
+  
+  <br>
+  
+  <h2>Rankings</h2>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tbody>
+    {{#each player}}
+      <tr class="player {{selectedPlayer}}">
+        <td>{{name}}</td>
+        <td>{{score}}</td>
+        {{#if currentUser}}
+        <td class="add-points"><i class="fa fa-plus"></i> <strong>5</strong></td>
+        <td class="remove-points"><i class="fa fa-minus"></i> <strong>5</strong></td>
+        <td class="delete"><i class="fa fa-trash"></i></td>
+        {{/if}}
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</template>

@@ -1,0 +1,35 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.selected {
+  background-color: #447;
+  color: #fff;
+}
+
+table tbody tr.player {
+  transition: background-color 0.2s linear;
+}
+
+h2 {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+td.add-points,
+td.remove-points,
+td.delete {
+  text-align: center;
+  cursor: pointer;
+}
+
+td.add-points:hover {
+  background: rgba(0, 255, 0, 0.4);
+}
+
+td.remove-points:hover {
+  background: rgba(255, 255, 0, 0.4);
+}
+
+td.delete:hover {
+  background: rgba(255, 0, 0, 0.4);
+}

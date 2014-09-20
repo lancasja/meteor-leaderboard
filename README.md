@@ -1,0 +1,1 @@
+http://my-leader-board.meteor.com/

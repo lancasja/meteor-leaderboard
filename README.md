@@ -1,1 +1,1 @@
-http://my-leader-board.meteor.com/
+Customized Metoer tutorial for building an interactive leaderboard.
